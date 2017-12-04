@@ -6867,7 +6867,19 @@ for (var i = 0; i < rules.length; i++) {
 }
 
 function FindProxyForURL(url, host) {
-  if (shExpMatch(host, "*.zerozero.cn")) {
+  if (shExpMatch(host, "pan.zerozero.cn")) {
+        return "PROXY 192.168.2.32:7777; DIRECT"
+  }
+  if (shExpMatch(host, "git.zerozero.cn")) {
+        return "PROXY 192.168.2.32:7777; DIRECT"
+  }
+  if (shExpMatch(host, "q.zerozero.cn")) {
+        return "PROXY 192.168.2.32:7777; DIRECT"
+  }
+  if (shExpMatch(host, "internal.zerozero.cn")) {
+        return "PROXY 192.168.2.32:7777; DIRECT"
+  }
+  if (shExpMatch(host, "projects.zerozero.cn")) {
         return "PROXY 192.168.2.32:7777; DIRECT"
   }
   if (defaultMatcher.matchesAny(url, host) instanceof BlockingFilter) {
